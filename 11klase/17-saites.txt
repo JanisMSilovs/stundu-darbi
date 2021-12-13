@@ -1,0 +1,5 @@
+https://matplotlib.org/
+https://numpy.org/
+
+https://people.csail.mit.edu/hubert/pyaudio/
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
