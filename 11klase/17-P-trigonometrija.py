@@ -37,7 +37,7 @@ def trig1_ar_skanu(a, f, t):
     stream.stop_stream()
     stream.close()
     p.terminate()
-
+#a
 trig1(1, 250)
 trig1_ar_skanu(0.1, 173, 7)
 
