@@ -50,3 +50,5 @@ mes = {
 # Tikai atslēgas "priekšmeti" vērtības stabiņā uz leju
 
 #SELECT priekšmeti FROM mes ORDER BY DESC
+
+#Nezinu par pēdejo

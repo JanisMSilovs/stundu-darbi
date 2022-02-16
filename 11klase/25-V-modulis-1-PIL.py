@@ -17,7 +17,7 @@ def bilde1():
      with Image.open(datne) as im:
          print(datne, im.format, f"{im.size}x{im.mode}")
          im = im.rotate(90)
-         izmers = (250, 100)
+         im.size = (250, 100)
          im.thumbnail()
          im.show()
          im.save('E:\\viss kopa\\darbi\ogre1.jpeg')
@@ -30,9 +30,9 @@ def bilde2():
         print(im.size)
         jaunais = (128, 128)
         im = im.resize(jaunais)
-        im.show()
         print(im.size)
         im.save('E:\\viss kopa\\darbi\ogre2.jpeg')
+        im.show()
 
 bilde2()
 

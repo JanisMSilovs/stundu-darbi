@@ -1,0 +1,26 @@
+1. uzdevums
+Uzdevumu par trijstūri papildini ar jaunu metodi, kura aprēķina vēl kādu lielumu
+Te daudz formulu. Atceries, ka uzreiz nav zināms, kāda veida trijstūris tas ir,
+tāpēc neaiztiec taisnleņķa, vienādmalu vai taml. formulas.
+https://www.matematika.lv/matematikas-formulas/trissturi.html
+
+Aprēķināto jāparāda arī ar metodi izdruka
+
+2. uzdevums
+Darbs ar 25-V-modulis-* programmām
+Visas pēc kārtas iedarbini, novēro iznākumu un ieraksti katras programmas kodā komentāru, kas izdevās.
+
+3. uzdevums ** (papilduzdevums)
+Dots koda fragments, kurš no trim skaitļiem, kas ir kāda iedomāta trijstūra malas a, b un c
+(zināms, ka c ir garākā no tām) nosaka, kāds trijstūris tas ir.
+Trijstūra uzdevumu papildini ar jaunu metodi, kura nosaka, kāda veida trijstūris tas ir.
+Izsauc šo metodi, izveidotajam trijstūra objektam.
+
+if a < b + c and b < a + c and c < a + b:
+    cPit = math.sqrt(a**2 + b**2)
+    if c == cPit:
+        print("Taisnleņķa trijstūris")
+    elif c < cPit:
+        print("Šaurleņķa trijstūris")
+    elif c > cPit:
+        print("Platleņķa trijstūris")
