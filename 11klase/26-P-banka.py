@@ -12,44 +12,95 @@
 #
 # marcinas = Banka(50)
 # utt.
-
+import random
+import sys
+from tracemalloc import stop
 class Banka:
     def __init__(self, summa):
         self.vards = input("Ievadiet savu vārdu!")
         self.konts = input("Ievadiet savu konta numuru!")
         self.summa = summa
-        self.pin = int(input("Ievadiet 4 ciparu pin kodu!"))
 
     def sasveicinaties(self):
-        print(f"Sveiki, {self.vards}!, kā es varu jūs šodien asistēt?")
+        print(f"""
+          ******************************************
+              Sveicināts, {self.vards}! 
+          ******************************************
+          """)
 
     def kontaatlikums(self):
-        print(f'Jūsu konta atlikums ir {self.summa}.')
+        ()
 
     def papildinat(self):
         apjoms = int(input("Lūdzu, ievadiet cik daudz naudas vēlaties papildināt!:"))
         self.summa = self.summa + apjoms
-        print(f'Papildinājums pieņemts! Jūsu konta atlikums ir {self.summa} eur.')
+        print()
         
     def iznemsana(self):
         nauda=int(input("Lūdzu, ievadiet cik daudz naudas vēlaties izņemt!:"))
         self.summa = self.summa-nauda
-        if self.summa < 0:
-            print(f"Jūs nevarat to izdarīt, mēģiniet ar mazāku summu!")
-        else:
-            print(f'Paldies! Jūsu kontā vēl ir {self.summa} eur.')
+        print()
+
+    def izvele(self):
+        print("""
+        IZVĒLNE
+        1. Konta atlikums
+        2. Papildināšana
+        3. Izņemšana
+        4. Beigšana
+        """)
+        while True:
+            try:
+                izvele = int(input("Izvēlaties vienu no opcijām!"))
+            except:
+                print("Error: Jūs varat izvēlēties tikai no 1, 2, 3, 4")
+                continue
+            else:
+                if izvele == 1:
+                    self.kontaatlikums()
+                    print(f"""
+          ******************************************
+             Jūsu kontā pieejamais atlikums:
+                       {self.summa}
+          ******************************************
+          """)
+                elif izvele == 2:
+                    self.papildinat()
+                    print(f"""
+          ******************************************
+              Papildināšana veiksmīgi izpildīta!                         
+              Čeka numurs: {random.randint(10000, 1000000)} 
+              Konta īpašnieks: {self.vards}                  
+              Konta numurs: {self.konts}                
+              Pieejamais atlikums: {self.summa}
+              Paldies, ka izvēlējāties tieši mūsu banku!    
+          ******************************************
+          """)
+                elif izvele == 3:
+                    self.iznemsana()
+                    print(f"""
+          ******************************************
+              Izņemšana veiksmīgi izpildīta!                         
+              Čeka numurs: {random.randint(10000, 1000000)} 
+              Konta īpašnieks: {self.vards}                  
+              Konta numurs: {self.konts}                
+              Pieejamais atlikums: {self.summa}
+              Paldies, ka izvēlējāties tieši mūsu banku!    
+          ******************************************
+          """)
+                elif izvele == 4:
+                    print(f"""
+          ******************************************
+              Darbības veiksmīgi izpildītas!                         
+              Čeka numurs: {random.randint(10000, 1000000)} 
+              Konta īpašnieks: {self.vards}                  
+              Konta numurs: {self.konts}                
+              Pieejamais atlikums: {self.summa}
+              Paldies, ka izvēlējāties tieši mūsu banku!    
+          ******************************************
+          """)
+            break
     
-    def atvadas(self):
-        print('''
-        ********************************************
-        PALDIES PAR TO, KA IZVĒLATIES MŪSU SERVISU!
-        ********************************************
-        ''')
-
 eur = Banka(100)
-eur.sasveicinaties()
-eur.kontaatlikums()
-eur.iznemsana()
-eur.papildinat()
-eur.atvadas()
-
+eur.sasveicinaties
+eur.izvele()
